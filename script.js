@@ -11,11 +11,9 @@ sidebar.style.top = `-${(slidesCount - 1) * 100}vh`
 upBtn.addEventListener('click', () => {
     changeSlide('up')
 })
-
 downBtn.addEventListener('click', () => {
     changeSlide('down')
 })
-
 function changeSlide(direction) {
     if (direction === 'up') {
         activeSlideIndex++
@@ -28,9 +26,7 @@ function changeSlide(direction) {
             activeSlideIndex = slidesCount - 1
         }
     }
-
     const height = container.clientHeight
-
     mainSlide.style.transform = `translateY(-${activeSlideIndex * height}px)`
     sidebar.style.transform = `translateY(${activeSlideIndex * height}px)`
 }
